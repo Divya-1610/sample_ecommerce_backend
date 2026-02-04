@@ -1,0 +1,84 @@
+
+###-----user requests:
+//add user
+//get all users/ get user by id
+//update user
+// add items to cart
+// delete user
+
+###----product request:
+//add products
+//get all products / get product by id
+//update product details
+// delete products
+
+//------------------------ user requests -------------
+//get user
+GET http://127.0.0.1:6666/user-api/users
+###
+
+//add user
+POST http://127.0.0.1:6666/user-api/users 
+Content-Type: application/json
+
+{
+    "username":"divya",
+    "email":"divfsadfs@gmail.cart",
+    "password":"222sa",
+    "cart":[]
+}
+###
+
+//add items to cart based on userid
+put http://127.0.0.1:6666/user-api/user-cart/userid//productid/698182b5291dbb0bf10237d6
+###
+
+//comparing ids
+GET http://127.0.0.1:6666/user-api/compare/698182b5291dbb0bf10237d6
+###
+//user deletion
+DELETE http://127.0.0.1:6666/user-api/del/69833f805302a48b860d7b55
+###
+//update user
+PUT http://127.0.0.1:6666/user-api/update/698343b75fe77ef63d8add88
+Content-Type: application/json
+
+{
+    "username":"damon",
+    "email":"damon1234@gmail.com",
+    "password":"demi123",
+    "cart":[]
+}
+
+
+
+####------------------product requests ---------------
+
+//get all products or get product by id
+GET http://127.0.0.1:6666/product-api/products
+###
+
+//delete product by id
+DELETE http://127.0.0.1:6666/product-api/products/698182b5291dbb0bf10237d6
+###
+
+//add products
+POST http://127.0.0.1:6666/product-api/products
+Content-Type: application/json
+
+{
+    "productname":"phone",
+    "price":40000,
+    "brand":"samsung"
+}
+###
+
+//update product by id
+PUT http://127.0.0.1:6666/product-api/products/update/698182b5291dbb0bf10237d6
+content-Type: application/json
+
+{
+    "productname":"tv",
+    "price":70000,
+    "brand":"LG"
+}
